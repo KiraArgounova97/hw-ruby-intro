@@ -105,6 +105,8 @@ end
 #Q2 ================================
 def starts_with_consonant? s
 
+  # val1 checks alphabetic/non-alphabetic
+  # val2 checks consonants/vowels
   val1 = /[[:alpha:]]/.match(s[0])
   val2 = /[aioueAIOUE]/.match(s[0])
   
@@ -123,10 +125,36 @@ end
 
 #Q3 ================================
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  
+  # Check whether binary/non-binary 
+  val1 = /[^01]/.match(s)
+  
+  # binary
+  if val1 == nil
+    
+    if s.empty? 
+      output = false 
+    else
+      # Convert the string into integer 
+      n = Integer(("0b" + s))
+      if (n % 4) == 0
+        output = true
+      else
+        output = false
+      end
+    end
+  # non-binary  
+  else 
+    output = false
+  end
+  
+  return output
+  
 end
 
-# Part 3
+
+
+# Part 3 ============================
 
 class BookInStock
 # YOUR CODE HERE
