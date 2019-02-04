@@ -71,16 +71,30 @@ end
 
 #Q3 ===============================
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  # false if array size is either 0 or 1
+  if arr.length == 0
+    return false
+  elsif arr.length == 1
+    return false
+  else 
+    # Use n = a + b <=> b = n - a scheme
+    for i in 0..arr.length-2
+      a = arr[i]
+      for j in i+1..arr.length-1
+        b = arr[j]
+        
+        if (b == n - a)
+          return true
+        end
+      end
+    end
+    return false 
+  end
+
 end
 
 
-
-
-
-
-
-# Part 2
+# Part 2 ============================
 def hello(name)
   # YOUR CODE HERE
 end
