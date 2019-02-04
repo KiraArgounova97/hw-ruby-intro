@@ -95,14 +95,33 @@ end
 
 
 # Part 2 ============================
+
+#Q1 =================================
 def hello(name)
-  # YOUR CODE HERE
+  return ("Hello, " + name)
 end
 
+
+#Q2 ================================
 def starts_with_consonant? s
-  # YOUR CODE HERE
+
+  val1 = /[[:alpha:]]/.match(s[0])
+  val2 = /[aioueAIOUE]/.match(s[0])
+  
+  if val1 == nil 
+    output = false 
+  elsif val2 == nil 
+    output = true
+  else
+    output = false
+  end
+    
+  return output
+  
 end
 
+
+#Q3 ================================
 def binary_multiple_of_4? s
   # YOUR CODE HERE
 end
