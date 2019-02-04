@@ -169,12 +169,13 @@ class BookInStock
     @isbn = isbn
     @price = price
   end
-  
-  
-  
-  
-  
-  
+
+  #Task 3: Define price_as_string method 
+  def price_as_string
+    # Possible error: the following method rounds up the value 
+    @price = '%.2f' % @price
+    @price = "$" + @price
+  end
 end
 
 
