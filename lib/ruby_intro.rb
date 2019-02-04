@@ -153,9 +153,28 @@ def binary_multiple_of_4? s
 end
 
 
-
 # Part 3 ============================
 
+# Task 1: Define the class 
 class BookInStock
-# YOUR CODE HERE
+  attr_accessor :isbn, :price
+  def initialize(isbn, price)
+    # Task2: raise ArgumentError
+    if isbn.empty?
+      raise ArgumentError, 'ISBN is an empty string'
+    end
+    if price <= 0
+      raise ArgumentError, 'Price is less than or equal to zero'
+    end
+    @isbn = isbn
+    @price = price
+  end
+  
+  
+  
+  
+  
+  
 end
+
+
